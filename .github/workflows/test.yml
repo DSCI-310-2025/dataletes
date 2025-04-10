@@ -19,13 +19,11 @@ jobs:
       - name: Install system dependencies
         run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
 
-      - name: Install R packages
-        run: |
-          Rscript -e 'install.packages(c("devtools", "remotes", "covr"), repos = "https://cloud.r-project.org")'
-          Rscript -e 'remotes::install_deps(dependencies = TRUE)'
+      - name: Install R package dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: devtools, covr
 
       - name: Run tests and upload coverage
         run: |
-          Rscript -e 'devtools::load_all()'
-          Rscript -e 'devtools::test()'
-          Rscript -e 'covr::codecov()'
+          Rscript -e 'devtools::load_all(); devtools::test(); covr::codecov()'
