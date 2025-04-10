@@ -23,6 +23,9 @@ jobs:
           Rscript -e "remotes::install_deps()"
       - name: Run tests and calculate coverage
         run: |
+          Rscript -e 'library(devtools)'
+          Rscript -e 'library(covr)'
+          Rscript -e 'covr::codecov()'
           Rscript -e 'covr::codecov()'
           Rscript -e 'load_all()'
           Rscript -e 'test()'
