@@ -3,7 +3,6 @@ library(readr)
 library(dplyr)
 library(tidyr)
 library(tibble)
-source("../../R/clean_functions.R")
 
 # Test data creation helper function
 create_test_data <- function() {
