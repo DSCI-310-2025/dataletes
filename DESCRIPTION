@@ -21,3 +21,6 @@ Imports:
     readr,
     testthat,
     tidyr
+Suggests: 
+    rmarkdown
+VignetteBuilder: knitr
