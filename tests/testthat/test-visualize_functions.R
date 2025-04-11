@@ -9,17 +9,7 @@ library(gridExtra)
 library(grid)
 library(knitr)
 library(testthat)
-source("../../R/visualize_functions.R")
 
- plots <- generate_scatterplots(
-   c("Age","Score"),
-   data.frame(
-   Age = c(25, 30, 35),
-   Score = c(85.5, 90.0, 78.3)
-   ),
-   "Age",
-   5
- )
 test_that("generate_scatterplots creates scatterplots correctly", {
  plots <- generate_scatterplots(
    c("Age","Score"),

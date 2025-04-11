@@ -10,7 +10,6 @@ library(grid)
 library(knitr)
 library(testthat)
 setwd("../../")
-source("R/model_functions.R")
 
 test_that("create_table creates the png of the table", {
 create_table(
