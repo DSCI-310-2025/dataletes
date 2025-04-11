@@ -1,5 +1,10 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- badges: start -->
+
+[![Tests](https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml/badge.svg)](https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml)
+[![Codecov test
+coverage](https://codecov.io/gh/DSCI-310-2025/dataletes/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/dataletes)
+<!-- badges: end -->
 
 # dataletes
 
