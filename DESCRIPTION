@@ -2,7 +2,7 @@ Package: dataletes
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: c(person("Roy", "Chen", email = "123.roychen@gmail.com", role = c("aut", "cre")),
-    person("Aarav", "Mahajan", email = "mahajanaarav2020@gmail.com", role = c("aut", "cre")))
+    person("Aarav", "Mahajan", email = "mahajanaarav2020@gmail.com", role = "aut"))
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
