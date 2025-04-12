@@ -27,11 +27,14 @@ jobs:
       - name: Build site
         run: Rscript -e 'pkgdown::build_site()'
 
+      - name: Set up Git credentials
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.PAGES }}@github.com/DSCI-310-2025/dataletes.git
+
       - name: Commit and push docs to main branch
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: "GitHub Actions"
-          author_email: "actions@github.com"
-          message: "Update docs with the latest changes"
-          add: "docs/*"
-          token: ${{ secrets.PAGES }}
+        run: |
+          git add docs/
+          git commit -m "AUTOMATIC PUSH"
+          git push origin main
