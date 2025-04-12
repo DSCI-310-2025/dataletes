@@ -34,11 +34,6 @@ jobs:
           
       - name: Fetch remote branches
         run: git fetch --all
-
-      - name: Check out main branch
-        run: |
-          git checkout main  # Now we can safely check out the main branch
-
       - name: Commit and push docs to main branch
         run: |
           git add docs/
