@@ -1,0 +1,29 @@
+name: testpackage
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+
+      - name: Install system dependencies
+        run: sudo apt-get update && sudo apt-get install -y libcurl4-openssl-dev libssl-dev libxml2-dev
+
+      - name: Install R package dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: devtools, covr
+
+      - name: Run tests and upload coverage
+        run: |
+          Rscript -e 'results <- covr::package_coverage(); results; devtools::load_all(); devtools::test();'

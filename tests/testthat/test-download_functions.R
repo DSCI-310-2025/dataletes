@@ -1,7 +1,6 @@
 library(testthat)
 library(readr)
 library(tibble)
-source("../../R/download_functions.R")
 
 # Test data creation helper function
 create_test_data <- function() {
