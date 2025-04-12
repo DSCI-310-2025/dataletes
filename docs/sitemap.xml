@@ -1,17 +1,17 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>/404.html</loc></url>
-<url><loc>/articles/dataletes-vignette.html</loc></url>
-<url><loc>/articles/index.html</loc></url>
-<url><loc>/authors.html</loc></url>
-<url><loc>/CONTRIBUTING.html</loc></url>
-<url><loc>/index.html</loc></url>
-<url><loc>/LICENSE-text.html</loc></url>
-<url><loc>/LICENSE.html</loc></url>
-<url><loc>/reference/clean_rolling_stone_data.html</loc></url>
-<url><loc>/reference/create_table.html</loc></url>
-<url><loc>/reference/download_rolling_stone_data.html</loc></url>
-<url><loc>/reference/generate_scatterplots.html</loc></url>
-<url><loc>/reference/index.html</loc></url>
-<url><loc>/reference/save_cleaned_data.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/404.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/articles/dataletes-vignette.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/articles/index.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/authors.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/CONTRIBUTING.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/index.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/LICENSE-text.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/LICENSE.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/reference/clean_rolling_stone_data.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/reference/create_table.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/reference/download_rolling_stone_data.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/reference/generate_scatterplots.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/reference/index.html</loc></url>
+<url><loc>https://dsci-310-2025.github.io/dataletes/reference/save_cleaned_data.html</loc></url>
 </urlset>
 

@@ -66,6 +66,16 @@ expect_error(create_table(
    list(100,0)
  ),"Invalid dimensions")
 })
+test_that("create_table throws error for non-dataframe value", {
+expect_error(create_table(
+   "not dataframe",
+   "TableTitle",
+   "tests/testthat",
+   "SecondImage",
+   list(100,0)
+ ),"Expected dataframe but was given: not dataframe")
+})
+
 # Clean up test files
 file.remove("tests/testthat/MyTableImage.png")
 file.remove("tests/testthat/SecondImage.png")

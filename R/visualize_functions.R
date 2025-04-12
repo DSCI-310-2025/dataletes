@@ -31,6 +31,10 @@ library(knitr)
 #' )
 #' }
 generate_scatterplots <- function(vars, plotdata, target, numberfrom) {
+  if (!is.data.frame(plotdata)) {
+    stop(paste0("Expected dataframe but was given: ",as.character(plotdata)))
+  }
+
   plots <- list()
   if (!is.character(target)) {
     stop(paste0("Expected string but was given: ",as.character(target)))

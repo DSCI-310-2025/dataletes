@@ -33,7 +33,9 @@ library(knitr)
 #' }
 create_table <- function(df,title,destination,name,dimensions) {
   # Save head of train_data_final
-
+  if (!is.data.frame(df)) {
+    stop(paste0("Expected dataframe but was given: ",as.character(df)))
+  }
   dir_path <- destination
 
   # Check if the directory exists

@@ -50,3 +50,11 @@ test_that("generate_scatterplots throws error for non-numeric variables", {
  ),"Non-numeric variables referenced in variable list")
 })
 
+test_that("generate_scatterplots throws error for non-dataframe parameter", {
+  expect_error(generate_scatterplots(
+   c("Age","Score"),
+   "undataframe",
+   "Age",
+   5
+ ),"Expected dataframe but was given: undataframe")
+})
