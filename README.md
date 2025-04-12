@@ -6,52 +6,18 @@
 coverage](https://codecov.io/gh/DSCI-310-2025/dataletes/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/dataletes)
 <!-- badges: end -->
 
-# dataletes
+\##Package Summary This package is used to download and visualize data.
+It contains basic functions for downloading and saving data into file
+locations while also removing unwanted columns to clean it. It also
+contains a function for plotting a list of variables against a target
+variable to analyze trends in a dataset. There also exists a function to
+convert tables into PNG files for usage in reports.
 
-<!-- badges: start -->
-<!-- badges: end -->
-
-The goal of dataletes is to …
-
-## Installation
-
-You can install the development version of dataletes from
-[GitHub](https://github.com/) with:
-
-``` r
-# install.packages("pak")
-pak::pak("DSCI-310-2025/dataletes")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
-library(dataletes)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
-
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+\##Related Packages This package is very related to the ggplot2 library
+and uses it extensively for the creation of visualizations. It differs
+from the library since it can be used to visualize tables as well as
+plots. This allows for tables to be more easily incorporated into
+reports as PNGs. The package is also similar to the dplyr package since
+they both allow for users to filter unwanted data out of the datasets.
+However, the data cleaning function in our package has less flexibility
+than the filter function in the dyplr package.
