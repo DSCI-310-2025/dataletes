@@ -36,8 +36,8 @@ jobs:
           git config user.email "actions@github.com"
 
       - name: Commit and push docs only if on main
-        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        if: github.ref == 'refs/heads/main'
         run: |
           git add docs/
           git commit -m "Update docs with the latest changes" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.PAGES_TOKEN }}@github.com/DSCI-310-2025/dataletes.git main
+          git push https://x-access-token:${{ secrets.PAGES }}@github.com/DSCI-310-2025/dataletes.git main
