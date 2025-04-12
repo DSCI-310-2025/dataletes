@@ -25,7 +25,7 @@ jobs:
           extra-packages: devtools, covr, pkgdown
 
       - name: Deploy pkgdown site and build vignettes
-        uses: r-lib/actions/pkgdown@v2
+        uses: r-lib/actions/pkgdown@v2-branch
         with:
           install-dependencies: true
           build-articles: true
