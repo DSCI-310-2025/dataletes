@@ -6,7 +6,6 @@ output: github_document
 [![Tests](https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml/badge.svg)](https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml)
 [![Codecov test
 coverage](https://codecov.io/gh/DSCI-310-2025/dataletes/graph/badge.svg)](https://app.codecov.io/gh/DSCI-310-2025/dataletes)
-[![R-CMD-check](https://github.com/DSCI-310-2025/dataletes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/DSCI-310-2025/dataletes/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Package Summary
