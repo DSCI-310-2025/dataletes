@@ -24,10 +24,13 @@ jobs:
         with:
           extra-packages: devtools, covr, pkgdown
 
-      - name: Deploy pkgdown site and build vignettes
-        uses: r-lib/actions/pkgdown@main
-        with:
-          install-dependencies: true
-          build-articles: true
-          build-website: true
+      - name: Build site
+        run: Rscript -e 'pkgdown::build_site()'
 
+      - name: Commit and push docs to main
+        uses: EndBug/add-and-commit@v7
+        with:
+          author_name: "GitHub Actions"
+          author_email: "actions@github.com"
+          message: "Update pkgdown site"
+          add: "docs/*"
