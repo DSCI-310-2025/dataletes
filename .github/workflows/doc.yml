@@ -2,16 +2,19 @@ name: makedoc
 
 on:
   push:
-    branches: [main]
+    branches: ['*']
   pull_request:
     branches: [main]
 
 jobs:
-  check:
+  build-docs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref_name }}
 
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
@@ -27,15 +30,14 @@ jobs:
       - name: Build site
         run: Rscript -e 'pkgdown::build_site()'
 
-      - name: Set up Git credentials
+      - name: Configure Git
         run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          
-      - name: Fetch remote branches
-        run: git fetch --all
-      - name: Commit and push docs to main branch
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Commit and push docs only if on main
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
           git add docs/
-          git commit -m "Update docs with the latest changes"
+          git commit -m "Update docs with the latest changes" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.PAGES_TOKEN }}@github.com/DSCI-310-2025/dataletes.git main
