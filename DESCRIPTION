@@ -24,3 +24,4 @@ Imports:
 Suggests: 
     rmarkdown
 VignetteBuilder: knitr
+URL: https://dsci-310-2025.github.io/dataletes/

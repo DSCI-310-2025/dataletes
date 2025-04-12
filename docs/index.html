@@ -68,43 +68,16 @@
       </header><div class="row">
   <div class="contents col-md-9">
 
-<p><a href="https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml" class="external-link"><img src="https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml/badge.svg" alt="Tests"></a> <a href="https://app.codecov.io/gh/DSCI-310-2025/dataletes" class="external-link"><img src="https://codecov.io/gh/DSCI-310-2025/dataletes/graph/badge.svg" alt="Codecov test coverage"></a> <!-- badges: end --></p>
-<div class="section level1">
-<div class="page-header"><h1 id="dataletes">dataletes<a class="anchor" aria-label="anchor" href="#dataletes"></a>
-</h1></div>
-<!-- badges: start -->
-<!-- badges: end -->
-<p>The goal of dataletes is to …</p>
+
 <div class="section level2">
-<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+<h2 id="package-summary">Package Summary<a class="anchor" aria-label="anchor" href="#package-summary"></a>
 </h2>
-<p>You can install the development version of dataletes from <a href="https://github.com/" class="external-link">GitHub</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># install.packages("pak")</span></span>
-<span><span class="fu">pak</span><span class="fu">::</span><span class="fu">pak</span><span class="op">(</span><span class="st">"DSCI-310-2025/dataletes"</span><span class="op">)</span></span></code></pre></div>
+<p>This package is used to download and visualize data. It contains basic functions for downloading and saving data into file locations while also removing unwanted columns to clean it. It also contains a function for plotting a list of variables against a target variable to analyze trends in a dataset. There also exists a function to convert tables into PNG files for usage in reports.</p>
 </div>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="related-packages">Related Packages<a class="anchor" aria-label="anchor" href="#related-packages"></a>
 </h2>
-<p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">dataletes</span><span class="op">)</span></span>
-<span><span class="co">## basic example code</span></span></code></pre></div>
-<p>What is special about using <code>README.Rmd</code> instead of just <code>README.md</code>? You can include R chunks like so:</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">cars</span><span class="op">)</span></span>
-<span><span class="co">#&gt;      speed           dist       </span></span>
-<span><span class="co">#&gt;  Min.   : 4.0   Min.   :  2.00  </span></span>
-<span><span class="co">#&gt;  1st Qu.:12.0   1st Qu.: 26.00  </span></span>
-<span><span class="co">#&gt;  Median :15.0   Median : 36.00  </span></span>
-<span><span class="co">#&gt;  Mean   :15.4   Mean   : 42.98  </span></span>
-<span><span class="co">#&gt;  3rd Qu.:19.0   3rd Qu.: 56.00  </span></span>
-<span><span class="co">#&gt;  Max.   :25.0   Max.   :120.00</span></span></code></pre></div>
-<p>You’ll still need to render <code>README.Rmd</code> regularly, to keep <code>README.md</code> up-to-date. <code><a href="https://devtools.r-lib.org/reference/build_rmd.html" class="external-link">devtools::build_readme()</a></code> is handy for this.</p>
-<p>You can also embed plots, for example:</p>
-<p><img src="reference/figures/README-pressure-1.png" width="100%"></p>
-<p>In that case, don’t forget to commit and push the resulting figure files, so they display on GitHub and CRAN.</p>
-</div>
+<p>This package is very related to the ggplot2 library and uses it extensively for the creation of visualizations. It differs from the library since it can be used to visualize tables as well as plots. This allows for tables to be more easily incorporated into reports as PNGs. The package is also similar to the dplyr package since they both allow for users to filter unwanted data out of the datasets. However, the data cleaning function in our package has less flexibility than the filter function in the dyplr package.</p>
 </div>
 
   </div>
@@ -118,6 +91,12 @@
 </ul>
 </div>
 
+<div class="community">
+<h2 data-toc-skip>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CONTRIBUTING.html">Contributing guide</a></li>
+</ul>
+</div>
 
 <div class="citation">
 <h2 data-toc-skip>Citation</h2>
@@ -133,7 +112,13 @@
 </ul>
 </div>
 
-
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml" class="external-link"><img src="https://github.com/DSCI-310-2025/dataletes/actions/workflows/test.yml/badge.svg" alt="Tests"></a></li>
+<li><a href="https://app.codecov.io/gh/DSCI-310-2025/dataletes" class="external-link"><img src="https://codecov.io/gh/DSCI-310-2025/dataletes/graph/badge.svg" alt="Codecov test coverage"></a></li>
+</ul>
+</div>
 
   </div>
 </div>
