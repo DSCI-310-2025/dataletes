@@ -27,10 +27,11 @@ jobs:
       - name: Build site
         run: Rscript -e 'pkgdown::build_site()'
 
-      - name: Commit and push docs to main
+      - name: Commit and push docs to main branch
         uses: EndBug/add-and-commit@v7
         with:
           author_name: "GitHub Actions"
           author_email: "actions@github.com"
-          message: "Update pkgdown site"
+          message: "Update docs with the latest changes"
           add: "docs/*"
+          token: ${{ secrets.PAGES }}
