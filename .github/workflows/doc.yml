@@ -24,6 +24,9 @@ jobs:
         with:
           extra-packages: devtools, covr, pkgdown
 
-      - name: Run tests and upload coverage
-        run: |
-          Rscript -e 'pkgdown::build_site(); devtools::build_vignettes()'
+      - name: Deploy pkgdown site and build vignettes
+        uses: r-lib/actions/pkgdown@v2
+        with:
+          install-dependencies: true
+          build-articles: true
+          build-website: true
