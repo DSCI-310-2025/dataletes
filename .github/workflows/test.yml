@@ -26,4 +26,4 @@ jobs:
 
       - name: Run tests and upload coverage
         run: |
-          Rscript -e 'devtools::load_all(); devtools::test(); covr::codecov()'
+          Rscript -e 'results <- covr::package_coverage(); results; devtools::load_all(); devtools::test();'
