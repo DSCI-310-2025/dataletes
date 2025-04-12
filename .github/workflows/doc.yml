@@ -36,7 +36,12 @@ jobs:
 
       - name: Commit and push docs only if on main
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
-        run: |
-          git add docs/
-          git commit -m "Update docs with the latest changes" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.PAGES }}@github.com/DSCI-310-2025/dataletes.git main
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          clean: false
+          branch: gh-pages
+          folder: docs
+        # run: |
+        #   git add docs/
+        #   git commit -m "Update docs with the latest changes" || echo "No changes to commit"
+        #   git push https://x-access-token:${{ secrets.PAGES }}@github.com/DSCI-310-2025/dataletes.git main
